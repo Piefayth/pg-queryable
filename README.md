@@ -27,9 +27,9 @@ var queryable = new Queryable(constring);
 
 var statement = "INSERT INTO schema.table SELECT table.column, table.column2 " +
                 "FROM table LEFT OUTER JOIN schema.table ON (table2.column = table2.column) " +
-                "WHERE table2.column IS NULL;
+                "WHERE table2.column IS NULL";
 var statement2 = "INSERT INTO schema.table SELECT table.column, table.column2 " +
-                "FROM table LEFT OUTER JOIN schema.table ON (table2.column = table2.column) " +
-                "WHERE table2.column IS NULL;
+                 "FROM table LEFT OUTER JOIN schema.table ON (table2.column = table2.column) " +
+                 "WHERE table2.column IS NULL";
 queryable.query(statement).query(statement2).query('COMMIT').end();
 ```
